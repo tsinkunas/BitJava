@@ -1,6 +1,9 @@
 package com.tsink.app;
 
+import org.w3c.dom.ls.LSOutput;
+
 import javax.print.DocFlavor;
+import java.util.Scanner;
 
 public class Java2ND {
     public static void main(String[] args){
@@ -63,5 +66,70 @@ public class Java2ND {
         System.out.println(lorem.replace('o','z'));
         //2d. Parašykite kodą, kuris patikrina ar stringas baigiasi žodžiu “elit”. Pagalvokite ką reiškia, kai stringas pasibaigia žodžiu.
         System.out.println(lorem.endsWith("elit"));
+        
+        // Sąlygos teiginiai
+
+        Scanner voting = new Scanner(System.in);  // Create a Scanner object
+        System.out.println("Įveskite savo amžių: ");
+        int age = voting.nextInt();  // Read user input
+        if (age < 18){
+            System.out.println("Dar neturite balsavimo teisės!");
+        }
+        else if (age < 45){
+            System.out.println("Prašome palikite savo balsą");
+        }
+        else {
+            System.out.println("Galite ne tik balsuoti, bet ir kandidatuoti");
+        }
+
+        // Ciklai
+        // 1. Sukurkite ciklą (tiek while, tiek for), kuris niekada nebūtų įgyvendintas.
+        int z = 0;
+        while (z > 1) {
+            System.out.println("z is " + z);
+            z++;
+        }
+        for (int q = 0; q > 10; q++) {
+            System.out.println("q is " + q);
+        }
+        // 2. Sukurkite ciklą (tiek while, tiek for), kuris niekada nesibaigtų (amžinas ciklas).
+
+        // while (z < 1) {
+        //     System.out.println("z is " + z);
+        //     z--;
+        // }
+        // for (int q = 0; q < 10; q--) {
+        //     System.out.println("q is " + q);
+        // }
+
+        // 3.
+        Scanner scan = new Scanner( System.in );
+        String inData = null;
+        String correct = "q";
+        do {
+            System.out.println("Enter the data:");
+            inData = scan.nextLine();
+            System.out.println("You entered:" + inData );
+            } while (!inData.equals(correct));
+
+        // 4.
+        Scanner scan2 = new Scanner( System.in );
+        String inData2 = null;
+        String correct2 = "q";
+        do {
+            System.out.println("Enter the data:");
+            inData2 = scan2.nextLine();
+            String reverse = new StringBuffer(inData2).reverse().toString();
+            System.out.println("You entered:" + reverse );
+        } while (!inData2.equals(correct2));
+
+        // 5.
+        Scanner scan3 = new Scanner( System.in );
+        System.out.println("Enter name:");
+        String name = scan3.next();
+        for(int i = 0; i < name.length(); i++) {
+            String name2 = String.valueOf(name.charAt(i));
+            System.out.println(name2 + (i + 1));
+        }
     }
 }
