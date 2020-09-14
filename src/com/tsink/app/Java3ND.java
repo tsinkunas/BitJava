@@ -64,5 +64,38 @@ public class Java3ND {
             stArr[k] = scString;
         }
         System.out.println(Arrays.toString(stArr));
+
+        // 4. Suskaičiuokite sumą visų reikšmių įvestų į masyvą (sumos algoritmas)
+        int [] sumArr = {5, 4, 3, 2, 1};
+        System.out.println("array before: "+ Arrays.toString(sumArr));
+        int sum = 0;
+        for (int k = 0; k < sumArr.length; k++) {
+            sum += sumArr[k];
+        }
+        System.out.println("sum: " + sum);
+
+        // 5. Suskaičiuokite vidurkį (vidurkio algoritmas).
+        int average  = sum / sumArr.length;
+        System.out.println("average: " + average);
+
+        // 6. Bubble sort
+        int iterations = 0;
+        int swaps = 0;
+        for (int k = 0; k < sumArr.length - 1; k++) {
+            for (int l = 0; l < sumArr.length - k - 1; l++){
+                iterations++;
+                if (sumArr[l] > sumArr[l+1]);
+                {
+                    int temp = sumArr[l];
+                    sumArr[l] = sumArr[l+1];
+                    sumArr[l+1] = temp;
+                    swaps++;
+                }
+            }
+
+        }
+        System.out.println("array after: " + Arrays.toString(sumArr));
+        System.out.println("iterations: " + iterations);
+        System.out.println("swaps: " + swaps);
     }
 }
