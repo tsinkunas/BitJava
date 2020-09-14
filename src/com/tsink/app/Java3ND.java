@@ -84,11 +84,10 @@ public class Java3ND {
         for (int k = 0; k < sumArr.length - 1; k++) {
             for (int l = 0; l < sumArr.length - k - 1; l++){
                 iterations++;
-                if (sumArr[l] > sumArr[l+1]);
-                {
-                    int temp = sumArr[l];
+                if (sumArr[l] > sumArr[l+1]){
+                    int tmp = sumArr[l];
                     sumArr[l] = sumArr[l+1];
-                    sumArr[l+1] = temp;
+                    sumArr[l+1] = tmp;
                     swaps++;
                 }
             }
